@@ -1,1 +1,15 @@
 An implementation of a Triway Pixel Value Differencing Algorithm in Matlab. The code is very basic and unoptimized and can probably be improved.
+
+Steganography is the art and science of writing hidden messages in such a way that no one, apart from the sender and intended recipient, suspects the existence of the message, a form of security through obscurity.
+
+Steganography includes the concealment of information within computer files. In digital steganography, electronic communications may include steganographic coding inside of a transport layer, such as a document file, image file, program or protocol. Media files are ideal for steganographic transmission because of their large size. As a simple example, a sender might start with an innocuous image file and adjust the color of every 100th pixel to correspond to a letter in the alphabet, a change so subtle that someone not specifically looking for it is unlikely to notice it.
+
+In this project I will be dealing with hiding text files into an image. The image will be altered in a small way. So small that a third party viewing the image would not be able to tell the difference between the original and modified image.
+
+The pixel value differencing algorithm(PVD) is an algorithm in which information to be hidden is hidden in the difference between two pixels. Say we want to add 01 as secret data into an image file. Now the difference between the pixels is modified in such a way that data can be stored as differences. Assuming that we store 1 bit per pixel. The first seceret bit 0 will mean that the last bit of the 1st and 2nd pixel should have a difference of zero. Now if the secret bit is 1 then the difference between the last bits of consecutive pixels should be one.
+
+The Triway Pixel value differencing algorithm(TPVD) is modified version of the Pixel Value Differencing algorithm. While PVD only considers differences in one direction (ie horizontally) TPVD considers differences in 3 directions(horizontal, vertical, diagnal). This is advantageous as it means more secret data can be embedded into the same file.
+
+For more information on TPVD refer to http://www.academypublisher.com/jmm/vol03/no02/jmm03023744.pdf
+
+
